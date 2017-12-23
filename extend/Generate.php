@@ -53,7 +53,6 @@ class Generate
         'file',
         'log_login',
         'node_map',
-        'web_log_001',
         'web_log_all',
     ];
 

@@ -325,34 +325,6 @@ CREATE TABLE `tp_one_two_three_four` (
 INSERT INTO `tp_one_two_three_four` VALUES ('1', 'yuan1994', 'tpadmin', '2', '1', null, '2222', 'https://github.com/yuan1994/tpadmin', '2016-12-07', '13012345678', 'tianpian0805@gmail.com', '50', '1', '0', '1481947278', '1481947353');
 
 -- ----------------------------
--- Table structure for tp_web_log_001
--- ----------------------------
-DROP TABLE IF EXISTS `tp_web_log_001`;
-CREATE TABLE `tp_web_log_001` (
-  `id` int(10) unsigned NOT NULL AUTO_INCREMENT COMMENT '日志主键',
-  `uid` smallint(5) unsigned NOT NULL DEFAULT '0' COMMENT '用户id',
-  `ip` char(15) NOT NULL DEFAULT '' COMMENT '访客ip',
-  `location` varchar(255) NOT NULL DEFAULT '' COMMENT '访客地址',
-  `os` varchar(255) NOT NULL DEFAULT '' COMMENT '操作系统',
-  `browser` varchar(255) NOT NULL DEFAULT '' COMMENT '浏览器',
-  `url` varchar(255) NOT NULL DEFAULT '' COMMENT 'url',
-  `module` varchar(255) NOT NULL DEFAULT '' COMMENT '模块',
-  `controller` varchar(255) NOT NULL DEFAULT '' COMMENT '控制器',
-  `action` varchar(255) NOT NULL DEFAULT '' COMMENT '方法',
-  `method` char(6) NOT NULL DEFAULT '' COMMENT '请求方式',
-  `data` text COMMENT '请求的param数据，serialize后的',
-  `create_at` int(10) unsigned NOT NULL DEFAULT '0' COMMENT '操作时间',
-  PRIMARY KEY (`id`),
-  KEY `uid` (`uid`),
-  KEY `ip` (`ip`),
-  KEY `create_at` (`create_at`) USING BTREE
-) ENGINE=MyISAM DEFAULT CHARSET=utf8 COMMENT='网站日志';
-
--- ----------------------------
--- Records of tp_web_log_001
--- ----------------------------
-
--- ----------------------------
 -- Table structure for tp_web_log_all
 -- ----------------------------
 DROP TABLE IF EXISTS `tp_web_log_all`;
@@ -374,7 +346,7 @@ CREATE TABLE `tp_web_log_all` (
   KEY `uid` (`uid`) USING BTREE,
   KEY `ip` (`ip`) USING BTREE,
   KEY `create_at` (`create_at`) USING BTREE
-) ENGINE=MRG_MyISAM DEFAULT CHARSET=utf8 ROW_FORMAT=DYNAMIC INSERT_METHOD=LAST UNION=(`tp_web_log_001`) COMMENT='网站日志';
+) ENGINE=MyISAM DEFAULT CHARSET=utf8 COMMENT='网站日志';
 
 -- ----------------------------
 -- Records of tp_web_log_all
