@@ -16,13 +16,9 @@ tpadmin 官方交流群：518162472
 
 ## 使用方法
 
-### composer安装：
-composer create-project yuan1994/tpadmin tpadmin  --prefer-dist
-
 ### git克隆：
-git clone https://github.com/yuan1994/tpadmin
-### 直接下载：
-https://github.com/yuan1994/tpadmin/archive/master.zip
+git clone https://github.com/hzjianshi/tpadmin
+
 > 框架的依赖需要通过 composer 下载，请在框架根目录执行 composer update ，已确保依赖的类库能下载下来
 
 ## 部署
@@ -66,7 +62,7 @@ https://github.com/yuan1994/tpadmin/archive/master.zip
 
 ## 鸣谢：
 本平台使用了如下框架或插件、源码
-* ThinkPHP 5.0.4 正式版
+* ThinkPHP 5.0.7 正式版
 * Hui.admin v2.5 
 * layer
 * jQuery Validform
